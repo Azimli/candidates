@@ -1,6 +1,6 @@
 package guavapay.guavapay.service.impl;
 
-import guavapay.guavapay.dao.CardTypeRepository;
+import guavapay.guavapay.repository.CardTypeRepository;
 import guavapay.guavapay.dto.CardTypeDto;
 import guavapay.guavapay.exception.CardsNotFoundException;
 import guavapay.guavapay.mapper.CardTypeMapper;

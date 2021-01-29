@@ -1,12 +1,12 @@
 package guavapay.guavapay.util;
 
-import guavapay.guavapay.dao.CardTypeRepository;
-import guavapay.guavapay.dao.UsersRepository;
+import guavapay.guavapay.repository.CardTypeRepository;
+import guavapay.guavapay.repository.OrderRepository;
+import guavapay.guavapay.repository.UsersRepository;
 import guavapay.guavapay.model.CardType;
 import guavapay.guavapay.model.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -15,6 +15,9 @@ import org.springframework.stereotype.Component;
 public class DataLoader implements CommandLineRunner {
 
     private UsersRepository usersRepository;
+
+    @Autowired
+    private OrderRepository orderRepository;
 
     @Autowired
     private CardTypeRepository cardTypeRepository;
@@ -43,5 +46,6 @@ public class DataLoader implements CommandLineRunner {
         cards.setCodeword("shakir");
         cards.setUrgent(true);
         cardTypeRepository.save(cards);
+
     }
 }

@@ -1,11 +1,10 @@
-package guavapay.guavapay.dao;
+package guavapay.guavapay.repository;
 
 import guavapay.guavapay.model.CardType;
-import guavapay.guavapay.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
+@Repository
 public interface CardTypeRepository extends JpaRepository<CardType,Long> {
 
 }

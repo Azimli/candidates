@@ -2,7 +2,7 @@ package guavapay.guavapay.controller;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import guavapay.guavapay.dao.UsersRepository;
+import guavapay.guavapay.repository.UsersRepository;
 import guavapay.guavapay.dto.UsersDto;
 import guavapay.guavapay.service.UsersService;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,7 +15,6 @@ import org.springframework.http.MediaType;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextImpl;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -23,7 +22,6 @@ import java.util.Collections;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 

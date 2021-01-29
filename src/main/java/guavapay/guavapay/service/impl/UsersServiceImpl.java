@@ -1,6 +1,6 @@
 package guavapay.guavapay.service.impl;
 
-import guavapay.guavapay.dao.UsersRepository;
+import guavapay.guavapay.repository.UsersRepository;
 import guavapay.guavapay.dto.UsersDto;
 import guavapay.guavapay.exception.UserNotFoundException;
 import guavapay.guavapay.mapper.UsersMapper;
