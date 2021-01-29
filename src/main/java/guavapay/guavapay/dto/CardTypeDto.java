@@ -3,15 +3,13 @@ package guavapay.guavapay.dto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import guavapay.guavapay.model.CardType;
 import guavapay.guavapay.model.Orders;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Collection;
 
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class CardTypeDto {
