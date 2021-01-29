@@ -1,9 +1,7 @@
 package guavapay.guavapay.mapper;
 
 
-import guavapay.guavapay.dto.CardTypeDto;
 import guavapay.guavapay.dto.OrdersDto;
-import guavapay.guavapay.model.CardType;
 import guavapay.guavapay.model.Orders;
 import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;

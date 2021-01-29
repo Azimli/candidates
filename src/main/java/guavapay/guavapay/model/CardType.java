@@ -30,4 +30,8 @@ public class CardType {
 
     private String codeword;
 
+
+
+
+
 }

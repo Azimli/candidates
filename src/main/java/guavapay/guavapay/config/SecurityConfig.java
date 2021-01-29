@@ -34,6 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .headers().frameOptions().disable().and()
                 .cors()
                 .and()
                 .csrf().disable()
@@ -46,7 +47,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/users/**").authenticated()
-                .antMatchers("/cards/**").authenticated();
+                .antMatchers("/cards/**").authenticated()
+                .antMatchers("/orders/**").authenticated();
 
     }
 

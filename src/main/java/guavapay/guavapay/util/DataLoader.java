@@ -1,5 +1,6 @@
 package guavapay.guavapay.util;
 
+import guavapay.guavapay.model.Orders;
 import guavapay.guavapay.repository.CardTypeRepository;
 import guavapay.guavapay.repository.OrderRepository;
 import guavapay.guavapay.repository.UsersRepository;
@@ -10,6 +11,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -46,6 +49,12 @@ public class DataLoader implements CommandLineRunner {
         cards.setCodeword("shakir");
         cards.setUrgent(true);
         cardTypeRepository.save(cards);
+
+        Orders orders = new Orders();
+        orders.setCreation_time(LocalDate.now());
+        orders.setStatus('1');
+        orderRepository.save(orders);
+
 
     }
 }

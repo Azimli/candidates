@@ -1,9 +1,13 @@
 package guavapay.guavapay.dto;
 
+import guavapay.guavapay.model.CardType;
+import guavapay.guavapay.model.Orders;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Collection;
 
 @Getter
 @Setter
@@ -22,4 +26,8 @@ public class CardTypeDto {
     private boolean urgent;
 
     private String codeword;
+
+   // private Collection<Orders> orders;
+
+
 }

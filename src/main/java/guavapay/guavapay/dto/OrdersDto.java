@@ -1,8 +1,12 @@
 package guavapay.guavapay.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import guavapay.guavapay.model.CardType;
+import guavapay.guavapay.model.Orders;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.Collection;
 
 @Getter
 @Setter
@@ -16,4 +20,7 @@ public class OrdersDto {
     private LocalDate creation_time;
 
     private char status;
+
+    private CardTypeDto cardTypeDto;
+
 }
