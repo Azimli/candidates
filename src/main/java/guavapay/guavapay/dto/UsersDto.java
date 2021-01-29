@@ -1,6 +1,7 @@
 package guavapay.guavapay.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 @Getter
@@ -10,6 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 public class UsersDto {
 
+    @JsonIgnore
     private Long id;
 
     private String username;

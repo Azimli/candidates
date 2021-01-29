@@ -1,5 +1,6 @@
 package guavapay.guavapay.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import guavapay.guavapay.model.CardType;
 import guavapay.guavapay.model.Orders;
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ import java.util.Collection;
 @AllArgsConstructor
 public class CardTypeDto {
 
+    @JsonIgnore
     private Long id;
 
     private String card_type;

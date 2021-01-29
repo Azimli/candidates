@@ -15,8 +15,10 @@ import java.util.Collection;
 @AllArgsConstructor
 public class OrdersDto {
 
+    @JsonIgnore
     private Long id;
 
+    @JsonIgnore
     private LocalDate creation_time;
 
     private char status;

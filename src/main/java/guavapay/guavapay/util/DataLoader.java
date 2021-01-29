@@ -39,22 +39,5 @@ public class DataLoader implements CommandLineRunner {
         users.setUsername("admin");
         users.setPassword(passwordEncoder.encode("123456"));
         usersRepository.save(users);
-
-        CardType cards = new CardType();
-
-        cards.setCard_type("MC");
-
-        cards.setHolder_name("Shakir Azimli");
-        cards.setPeriod(24);
-        cards.setCodeword("shakir");
-        cards.setUrgent(true);
-        cardTypeRepository.save(cards);
-
-        Orders orders = new Orders();
-        orders.setCreation_time(LocalDate.now());
-        orders.setStatus('1');
-        orderRepository.save(orders);
-
-
     }
 }
