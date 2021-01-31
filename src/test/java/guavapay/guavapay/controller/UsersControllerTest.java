@@ -73,6 +73,7 @@ public class UsersControllerTest {
     }
 
     @Test
+
     public void getUsersById() throws Exception {
         when(usersService.getUsers(USER_ID)).thenReturn(usersDto);
         mvc.perform(get(APIBYID,USER_ID)
