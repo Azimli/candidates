@@ -114,6 +114,19 @@ public class UsersServiceImplTest {
     }
 
     @Test
+    public void createUsersTestError(){
+        UsersDto dto = UsersDto.builder()
+                .id(null)
+                .username("shakir.azimli")
+                .password("123456").build();
+
+        exceptionRule.expect(UserNotFoundException.class);
+        exceptionRule.expectMessage("Users id must be null");
+        userService.createUsers(dto);
+    }
+
+
+    @Test
     public void updateUsersTest(){
 
         Users users = new Users(1L,"shakir.azimli","123456");
