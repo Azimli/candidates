@@ -73,6 +73,7 @@ public class UsersServiceImplTest {
         Users users = new Users(1L,"shakir.azimli","123456");
         when(userRepository.findById(1L)).thenReturn(Optional.of(users));
         UsersDto list = userService.getUsers(1L);
+        userService.listUsers();
         assertEquals(users.getId(),list.getId());
         assertEquals(users.getUsername(),list.getUsername());
         assertEquals(users.getPassword(),list.getPassword());

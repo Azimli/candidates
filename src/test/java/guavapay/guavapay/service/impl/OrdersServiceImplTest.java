@@ -98,6 +98,7 @@ public class OrdersServiceImplTest {
     void listOrdersTest(){
         Orders orders = new Orders(1L,LocalDate.now(),'1',cardType);
         when(orderRepository.findById(1L)).thenReturn(Optional.of(orders));
+        ordersService.listOrders();
         OrdersDto list = ordersService.getOrders(1L);
         assertEquals(orders.getId(),list.getId());
         assertEquals(orders.getStatus(),list.getStatus());

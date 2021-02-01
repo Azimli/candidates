@@ -62,6 +62,7 @@ public class CardsTypeServiceImplTest{
     public void listCardsTest() {
         CardType cardType = new CardType(1L,"MS","Shakir Azimli",24,true,"shakir");
         when(cardTypeRepository.findById(1L)).thenReturn(Optional.of(cardType));
+        cardsTypeService.listCards();
         CardTypeDto list = cardsTypeService.getCards(1L);
         assertEquals(cardType.getId(),list.getId());
         assertEquals(cardType.getCodeword(),list.getCodeword());
